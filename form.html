@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <h1>Validation Form</h1>
+    
+
+    
+    <div class="formdesign">
+        Name: <input type="text" id="fname" name="fname" onkeyup="validateName()">
+        <b><span class="formerror" id="name-span"></span></b>
+    </div>
+
+    <div class="formdesign">
+        Email: <input id="emailInput" type="email" onkeyup="validateEmail()">
+        <b><span class="formerror" id="email-span"></span></b>
+    </div>
+
+    <div class="formdesign">
+        Phone: <input id="phoneInput" type="text" onkeyup="validatePhone()">
+        <b><span class="formerror" id="phone-span"></span></b>
+    </div>
+
+    <div class="formdesign">
+            Password: <input id="password" type="password"  onkeyup="validatePass()"><b>
+            <span class="formerror" id="pass-span"></span></b>
+    </div>
+
+    <div class="formdesign" id="cpass">
+            Confirm Password: <input type="password" name="fcpass" id="Cpass" onkeyup="verifyPass()"><b>
+                <span class="formerror" id="span-Cpass"></span></br>
+    </div>
+
+<!-- 
+        <div class="formdesign" id="gender" >
+            
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+    
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+            
+            <label>
+                <input type="radio" name="gender" value="other">
+                Other
+            </label>
+        </div> -->
+        <!-- <div>
+
+            <label>Gender: </label><br>
+            <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div> -->
+
+        <br>
+
+        <div class="date">
+           Choose Date and time :<br>
+            <br>
+            <input type="datetime-local" min="1922-11-11T00:00" max="2024-11-11T23:59">
+        </div>
+
+        <div>
+            <button class="submit-btn" type="" onclick="submit(),verifyPass(),validateEmail(),validateName(),validatePhone(),validatePass()">Submit</button>
+        
+        </div>
+
+</body>
+</html>
